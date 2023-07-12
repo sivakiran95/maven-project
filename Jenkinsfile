@@ -22,5 +22,13 @@ pipeline {
                             '''
                         }
                       }
+            stage('Deployment') {
+                      steps {
+                            sh '''
+                            cd /home/ubuntu/.jenkins/workspace/jenkins/webapp
+                            cp target/webapp.war /home/ubuntu/tomcat/apache-tomcat-8.5.90/webapps
+                            '''                   
+                            }
+                 }      
         }
 }
