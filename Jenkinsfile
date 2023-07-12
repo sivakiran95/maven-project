@@ -4,7 +4,7 @@ pipeline {
        	    stage("git_checkout") {  
            	    steps {  
     			sh '''
-                         rm -rf maven-project
+  //                       rm -rf maven-project
               	    echo "cloning repository" 
                     git clone https://github.com/sivakiran95/maven-project.git
               	    echo "repo cloned successfully"  
