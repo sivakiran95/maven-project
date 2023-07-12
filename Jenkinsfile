@@ -13,23 +13,5 @@ peline {
               	  
          	    } 
          	    
-         	    stage('Build') {
-                 steps {
-                           sh '''
-                            cd maven-project
-
-                            mvn  install
-                            '''
-                        }
-                      }
-                      
-                stage('Deployment') {
-                      steps {
-                            sh '''
-                            cd /home/ubuntu/.jenkins/workspace/pipeline_job/maven-project/webapp
-                            cp target/webapp.war /home/ubuntu/tomcat/apache-tomcat-8.5.90/webapps
-                            '''                   
-                            }
-                 }      
         }
 }
