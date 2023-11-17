@@ -10,5 +10,5 @@ RUN mv apache-tomcat-8.5.91 tomcat
 RUN mkdir -p /home/satya
 RUN mv /tomcat /home/satya
 COPY webapp/target/webapp.war /home/satya/tomcat/webapps
-#EXPOSE 8080
+EXPOSE 8080
 ENTRYPOINT sh /home/satya/tomcat/bin/startup.sh && bash
